@@ -8,6 +8,7 @@
         <script src="componentes/methods.js"></script>
         <script src="componentes/v-model.js"></script>
         <script src="componentes/v-model-checkboxs.js"></script>
+        <script src="componentes/emit.js"></script>
     </head>
     <body>
         <div id="app">
@@ -16,6 +17,7 @@
             <computed-pr></computed-pr>
             <v-model></v-model>
             <v-model-checkboxs></v-model-checkboxs>
+            <emit @show_car_brand="showcarbrandfromcomponent"></emit>
         </div>
 
 
@@ -23,6 +25,11 @@
 
             new Vue({
                 el:'#app',
+                methods:{
+                    showcarbrandfromcomponent(dato){
+                        alert(dato);
+                    }
+                }
             })
         </script>
     </body>
