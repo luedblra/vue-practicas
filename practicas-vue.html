@@ -9,6 +9,12 @@
         <script src="componentes/v-model.js"></script>
         <script src="componentes/v-model-checkboxs.js"></script>
         <script src="componentes/emit.js"></script>
+        <script src="componentes/parent-data.js"></script>
+        <script src="componentes/child-data.js"></script>
+        <script src="componentes/child-methods.js"></script>
+        <script src="componentes/login-form.js"></script>
+        <script src="componentes/loops.js"></script>
+        <script src="componentes/v-if.js"></script>
     </head>
     <body>
         <div id="app">
@@ -18,6 +24,12 @@
             <v-model></v-model>
             <v-model-checkboxs></v-model-checkboxs>
             <emit @show_car_brand="showcarbrandfromcomponent"></emit>
+            <parent-data></parent-data>
+            <child-data ref="ChildData"></child-data>
+            <child-methods ref="Childmethods"></child-methods>
+            <login-form></login-form>
+            <loop></loop>
+            <condicional-v-if></condicional-v-if>
         </div>
 
 
@@ -25,6 +37,18 @@
 
             new Vue({
                 el:'#app',
+                mounted(){
+                    const child = this.$refs.ChildData.childName;
+                    console.log(child);
+                    setTimeout(() => {
+                        this.$refs.Childmethods.showDatachild();
+                    },2000)
+                },
+                data(){
+                    return {
+                        'appName':'Iniciando en Vue.'
+                    }  
+                },
                 methods:{
                     showcarbrandfromcomponent(dato){
                         alert(dato);
