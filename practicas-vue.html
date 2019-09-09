@@ -23,6 +23,9 @@
         <script src="componentes/dynamic-components/cmp3.js"></script>
         <script src="componentes/load-dynamic-component.js"></script>
         <script src="componentes/mixins.js"></script>
+        <script src="componentes/filter/currecy_filter.js"></script>
+        <script src="pugins/aboutMe.js"></script>
+        <script src="componentes/props.js"></script>
         
     </head>
     <body>
@@ -42,6 +45,8 @@
             <get-set-computed></get-set-computed>
             <load-dynamic-component></load-dynamic-component>
             <mixins></mixins>
+            <props name="Luis E" surname="Blanco R" :edad="25" ></props>
+            <props name="Antonio" surname="Perez" :edad="15" ></props>
         </div>
 
 
@@ -54,7 +59,9 @@
                     console.log(child);
                     setTimeout(() => {
                         this.$refs.Childmethods.showDatachild();
-                    },2000)
+                    },2000);
+                    
+                    console.log(this.$me('Luis Blanco',25));
                 },
                 data(){
                     return {

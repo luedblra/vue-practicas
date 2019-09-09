@@ -7,7 +7,7 @@ Vue.component('get-set-computed',{
     computed: {
         amountFormatted:{
             get(){
-                return `${this.amount} $`
+                return `${this.amount}`
             },
             set(newValue){
                 this.amount= newValue+`1`;
@@ -18,7 +18,7 @@ Vue.component('get-set-computed',{
     template: `<div>
 <h2>Get and Set computed </h2>
 <input v-model="amount"/>
-<p>{{amountFormatted}}</p>
+<p>{{amountFormatted | currency_filter('$')}}</p>
 
 </div>`
 });
