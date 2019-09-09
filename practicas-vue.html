@@ -3,6 +3,8 @@
     <head>
         <title>Page Title</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="directivas/focus.js"></script>
+        <script src="directivas/change-style.js"></script>
         <script src="componentes/mensaje.js"></script>
         <script src="componentes/computed-property.js"></script>
         <script src="componentes/methods.js"></script>
@@ -15,11 +17,18 @@
         <script src="componentes/login-form.js"></script>
         <script src="componentes/loops.js"></script>
         <script src="componentes/v-if.js"></script>
+        <script src="componentes/get-set-computed.js"></script>
+        <script src="componentes/dynamic-components/cmp1.js"></script>
+        <script src="componentes/dynamic-components/cmp2.js"></script>
+        <script src="componentes/dynamic-components/cmp3.js"></script>
+        <script src="componentes/load-dynamic-component.js"></script>
+        <script src="componentes/mixins.js"></script>
+        
     </head>
     <body>
         <div id="app">
             <p>inicia el Mensaje</p>
-            <message></message>
+            <message v-change-style="{backgroundColor: 'blue',color:'white'}"></message>
             <computed-pr></computed-pr>
             <v-model></v-model>
             <v-model-checkboxs></v-model-checkboxs>
@@ -30,6 +39,9 @@
             <login-form></login-form>
             <loop></loop>
             <condicional-v-if></condicional-v-if>
+            <get-set-computed></get-set-computed>
+            <load-dynamic-component></load-dynamic-component>
+            <mixins></mixins>
         </div>
 
 

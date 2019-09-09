@@ -7,7 +7,7 @@ Vue.component('v-model',{
     template:`
 <div>
     <h2>V-model</h2>
-    <input v-model="framework" />
+    <input v-model="framework" v-focus />
     <p>El Framework escogido es: {{framework}}</p>
 </div>
 `
