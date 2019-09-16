@@ -2,25 +2,17 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <p>Hooola Luis</p>
-      <h5>{{message}}</h5>
-      <h5>{{ $store.state.counter}}</h5>
-      <counter-cmp></counter-cmp>
   </div>
 </template>
 
 <script>
-import CounterCmp from '@/components/Counter'
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
   name: 'app',
-    components:{
-      CounterCmp  
-    },
-    data(){
-        return {
-            message: 'Hola desde export'
-        }
-    }
+  components: {
+    HelloWorld
+  }
 }
 </script>
 <style lang="stylus">

@@ -5,14 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        counter: 0
+        counter: 0,
+        appName: 'Contador Vuex'
     },
     mutations: {
-        increment (state){
-            state.counter += 1
+        increment (state , qty){
+            state.counter += qty
         },
-        decrement (state){
-            state.counter -= 1
+        decrement (state , qty){
+            state.counter -= qty
         }
     }
 })
